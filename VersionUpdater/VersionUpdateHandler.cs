@@ -12,6 +12,11 @@ namespace VersionUpdater
 	public class VersionUpdateHandler
 		: CommandHandler
 	{
+		protected override void Update (CommandInfo info)
+		{
+			base.Update (info);
+		}
+
 		protected override void Run ()
 		{
 			var solutions = IdeApp
@@ -112,7 +117,7 @@ namespace VersionUpdater
 							.Single ();
 						var buildIndex = manifestLines.IndexOf (buildLine);
 						var buildElement = manifestLines [buildIndex];
-						buildElement = Regex.Replace (buildString, buildMatch, nextBuildString);
+						buildElement = Regex.Replace (buildElement, buildMatch, nextBuildString);
 						manifestLines [buildIndex] = buildElement;
 
 						File.WriteAllLines (manifest.FilePath, manifestLines.ToArray ());
