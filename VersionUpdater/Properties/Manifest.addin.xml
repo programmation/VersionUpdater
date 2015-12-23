@@ -3,7 +3,7 @@
 	<Extension path="/MonoDevelop/Ide/Commands/Tools">
 		<Command id="VersionUpdater.VersionUpdateCommands.UpdateVersion"
 			_label="Update Version"
-			defaultHandler="VersionUpdaer.VersionUpdateHandler" />
+			defaultHandler="VersionUpdater.VersionUpdateHandler" />
 	</Extension>
 	<Extension path="/MonoDevelop/Ide/MainMenu/Tools">
 		<CommandItem id="VersionUpdater.VersionUpdateCommands.UpdateVersion" />
